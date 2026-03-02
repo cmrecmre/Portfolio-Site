@@ -8,11 +8,18 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <style type="text/tailwindcss">
     @layer components {
+
+    .background{
+      @apply bg-gradient-to-b from-[#CBF3BB] to-[#ECF4E8] min-h-screen;
+    }
+    .headeralt{
+        @apply text-3xl text-center font-bold italic text-[#ECF4E8];
+    }
     .main-wrapper 
     { @apply max-w-5xl mx-auto p-4 space-y-8; }
             
     .intro-box 
-    { @apply bg-[#93BFC7] p-8 rounded-3xl shadow-lg text-center text-[#ECF4E8]; }
+    { @apply bg-[#93BFC7] p-8 rounded-3xl shadow-lg text-center text-[#ECF4E8] text-lg opacity-90; }
 
     .hobby-category 
     { @apply bg-[#ECF4E8] rounded-2xl shadow-md overflow-hidden mb-4 border border-[#93BFC7]/20; }
@@ -32,17 +39,23 @@
 
     .collection-image{
       @apply mt-4 mx-auto rounded-xl shadow-md w-full max-w-md border-4 border-[#84B179]; }
-    
+      
+    .footer {
+        @apply flex justify-center space-x-6 mt-20 bg-[#93BFC7] p-5 text-[#ECF4E8] text-center space-y-4;
     }
+    .social-icon {
+        @apply inline-block mx-3 text-2xl hover:scale-110 transition-transform hover:text-[#CBF3BB];
+    }
+  }
 </style>
 </head>
 
-<body class="bg-gradient-to-b from-[#CBF3BB] to-[#ECF4E8] min-h-screen">
+<body class="background">
 <main class="main-wrapper">
 
 <section class="intro-box">
-<h1 class="text-3xl font-bold mb-4 italic">My Hobbies - Introduction</h1>
-<p class="text-lg opacity-90">
+<h1 class="headeralt">My Hobbies - Introduction</h1>
+<p>
   As I have mentioned in the main page, I have many hobbies, mainly based on art.<br>
   I will be mentioning them in detail here now. They are not made up by the way, I do enjoy the things listed here.
 </p>
@@ -143,7 +156,13 @@ It has been 2 years since then and I seriously understand Danish words, sentence
 
 </section> <!--END OF HOBBY DETAILS-->
 
-</main>    
+</main>
+<footer class="footer">
+  <div>
+    <a href="https://github.com/cmrecmre" target="_blank" class="social-icon">GitHub</a>
+    <a href="https://www.linkedin.com/in/cemre-su-türlü-bbb828318" target="_blank" class="social-icon">LinkedIn</a>
+    <a href="https://www.instagram.com/_slowtwn/" target="_blank" class="social-icon">Instagram</a>
+  </div>
+</footer>    
 </body>
-<footer><hr></hr></footer>
 </html>

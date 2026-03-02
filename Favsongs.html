@@ -8,15 +8,21 @@
 </head>
 <style type="text/tailwindcss">
     @layer components {
-
+    
+    .background{
+      @apply bg-gradient-to-b from-[#CBF3BB] to-[#ECF4E8] min-h-screen;
+    }
+    .headeralt{
+        @apply text-3xl text-center font-bold italic text-[#ECF4E8];
+    }
     .main-wrapper 
     { @apply max-w-5xl mx-auto p-4 space-y-8; }
 
     .intro-box
-    { @apply bg-[#93BFC7] p-8 rounded-3xl shadow-lg text-center text-[#ECF4E8]; }
+    { @apply bg-[#93BFC7] p-8 rounded-3xl shadow-lg text-center text-[#ECF4E8] mt-2 opacity-90; }
     
     .table-container 
-    { @apply bg-[#ECF4E8] rounded-2xl shadow-lg overflow-hidden border border-[#93BFC7]/30; }
+    { @apply bg-[#ECF4E8] rounded-2xl shadow-lg overflow-hidden border border-[#93BFC7]/30 overflow-x-auto; }
     
     .my-table
     { @apply w-full text-left border-collapse bg-[#ECF4E8]/30 rounded-2xl shadow-inner overflow-hidden; }
@@ -24,31 +30,40 @@
     .grid-header {
       @apply hidden md:grid grid-cols-3 gap-4 p-4 bg-[#93BFC7] text-[#ECF4E8] font-bold rounded-t-xl uppercase text-sm;
     }
-
     .song-row {
       @apply grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 p-4 mb-4 md:mb-0 
              bg-[#ECF4E8] md:bg-transparent border-b border-[#93BFC7]/20 
              hover:bg-[#93BFC7]/10 transition-colors rounded-xl md:rounded-none;
     }
-
     .mobile-label {
       @apply md:hidden font-bold text-[#93BFC7] mr-2 text-xs uppercase;
     }
-    
+    .artist{
+      @apply font-bold text-[#93BFC7] md:text-[#84B179];
+    }
+    .othertext{
+      @apply text-[#84B179]
+    }
+    .footer {
+        @apply flex justify-center space-x-6 mt-20 bg-[#93BFC7] p-5 text-[#ECF4E8] text-center space-y-4;
+    }
+    .social-icon {
+        @apply inline-block mx-3 text-2xl hover:scale-110 transition-transform hover:text-[#CBF3BB];
+    }
     }
 </style>
 
-<body class="bg-gradient-to-b from-[#CBF3BB] to-[#ECF4E8] min-h-screen">
+<body class="background">
 <main class="main-wrapper">
 
 <section class="intro-box">
-<h1 class="text-3xl font-bold italic">Introduction</h1><br> <!--INTRO-->
-<p class="mt-2 opacity-90">This is not mentioned in the assignment description but I wanted to play around with the tables too.</p><br>    
+<h1 class="headeralt">Introduction</h1><br> <!--INTRO-->
+<p>This is not mentioned in the assignment description but I wanted to play around with the tables too.</p><br>    
 </section>
 
 
 <section>
-<div class="table-container overflow-x-auto">
+<div class="table-container">
 <table class="my-table">
 
 <div class="grid-header">
@@ -58,105 +73,111 @@
 </div>
 
 <div class="song-row">
-        <div><span class="mobile-label">Artist:</span><span class="font-bold text-[#93BFC7] md:text-[#84B179]">Porter Robinson</span></div>
-        <div><span class="mobile-label">Album:</span><span class="text-[#84B179]">Nurture</span></div>
-        <div><span class="mobile-label">Song:</span><span class="text-[#84B179]">Fullmoon Lullaby</span></div>
+        <div><span class="mobile-label">Artist:</span><span class="artist">Porter Robinson</span></div>
+        <div><span class="mobile-label">Album:</span><span class="othertext">Nurture</span></div>
+        <div><span class="mobile-label">Song:</span><span class="othertext">Fullmoon Lullaby</span></div>
 </div>
 
 <div class="song-row">
-        <div><span class="mobile-label">Artist:</span><span class="font-bold text-[#93BFC7] md:text-[#84B179]">Twenty One Pilots</span></div>
-        <div><span class="mobile-label">Album:</span><span class="text-[#84B179]">Self-Titled</span></div>
-        <div><span class="mobile-label">Song:</span><span class="text-[#84B179]">Ode to Sleep</span></div>
+        <div><span class="mobile-label">Artist:</span><span class="artist">Twenty One Pilots</span></div>
+        <div><span class="mobile-label">Album:</span><span class="othertext">Self-Titled</span></div>
+        <div><span class="mobile-label">Song:</span><span class="othertext">Ode to Sleep</span></div>
 </div>
 
 <div class="song-row">
-        <div><span class="mobile-label">Artist:</span><span class="font-bold text-[#93BFC7] md:text-[#84B179]">Yot Club</span></div>
-        <div><span class="mobile-label">Album:</span><span class="text-[#84B179]">Bipolar</span></div>
-        <div><span class="mobile-label">Song:</span><span class="text-[#84B179]">for sale 2 own</span></div>
+        <div><span class="mobile-label">Artist:</span><span class="artist">Yot Club</span></div>
+        <div><span class="mobile-label">Album:</span><span class="othertext">Bipolar</span></div>
+        <div><span class="mobile-label">Song:</span><span class="othertext">for sale 2 own</span></div>
 </div>
 
 <div class="song-row">
-        <div><span class="mobile-label">Artist:</span><span class="font-bold text-[#93BFC7] md:text-[#84B179]">Glass Animals</span></div>
-        <div><span class="mobile-label">Album:</span><span class="text-[#84B179]">How To Be a Human Being</span></div>
-        <div><span class="mobile-label">Song:</span><span class="text-[#84B179]">Agnes</span></div>
+        <div><span class="mobile-label">Artist:</span><span class="artist">Glass Animals</span></div>
+        <div><span class="mobile-label">Album:</span><span class="othertext">How To Be a Human Being</span></div>
+        <div><span class="mobile-label">Song:</span><span class="othertext">Agnes</span></div>
 </div>
 
 <div class="song-row">
-        <div><span class="mobile-label">Artist:</span><span class="font-bold text-[#93BFC7] md:text-[#84B179]">Fall Out Boy</span></div>
-        <div><span class="mobile-label">Album:</span><span class="text-[#84B179]">Save Rock and Roll</span></div>
-        <div><span class="mobile-label">Song:</span><span class="text-[#84B179]">Sunshine Riptide</span></div>
+        <div><span class="mobile-label">Artist:</span><span class="artist">Fall Out Boy</span></div>
+        <div><span class="mobile-label">Album:</span><span class="othertext">Save Rock and Roll</span></div>
+        <div><span class="mobile-label">Song:</span><span class="othertext">Sunshine Riptide</span></div>
 </div>
 
 <div class="song-row">
-        <div><span class="mobile-label">Artist:</span><span class="font-bold text-[#93BFC7] md:text-[#84B179]">Mitski</span></div>
-        <div><span class="mobile-label">Album:</span><span class="text-[#84B179]">The Land is Inhospitable and So Are We</span></div>
-        <div><span class="mobile-label">Song:</span><span class="text-[#84B179]">I Want You</span></div>
+        <div><span class="mobile-label">Artist:</span><span class="artist">Mitski</span></div>
+        <div><span class="mobile-label">Album:</span><span class="othertext">The Land is Inhospitable and So Are We</span></div>
+        <div><span class="mobile-label">Song:</span><span class="othertext">I Want You</span></div>
 </div>
 
 <div class="song-row">
-        <div><span class="mobile-label">Artist:</span><span class="font-bold text-[#93BFC7] md:text-[#84B179]">Coldplay</span></div>
-        <div><span class="mobile-label">Album:</span><span class="text-[#84B179]"> Head Full of Dreams</span></div>
-        <div><span class="mobile-label">Song:</span><span class="text-[#84B179]">Birds</span></div>
+        <div><span class="mobile-label">Artist:</span><span class="artist">Coldplay</span></div>
+        <div><span class="mobile-label">Album:</span><span class="othertext"> Head Full of Dreams</span></div>
+        <div><span class="mobile-label">Song:</span><span class="othertext">Birds</span></div>
 </div>
 
 <div class="song-row">
-        <div><span class="mobile-label">Artist:</span><span class="font-bold text-[#93BFC7] md:text-[#84B179]">Tame Impala</span></div>
-        <div><span class="mobile-label">Album:</span><span class="text-[#84B179]">Deadbeat</span></div>
-        <div><span class="mobile-label">Song:</span><span class="text-[#84B179]">Loser</span></div>
+        <div><span class="mobile-label">Artist:</span><span class="artist">Tame Impala</span></div>
+        <div><span class="mobile-label">Album:</span><span class="othertext">Deadbeat</span></div>
+        <div><span class="mobile-label">Song:</span><span class="othertext">Loser</span></div>
 </div>
 
 <div class="song-row">
-        <div><span class="mobile-label">Artist:</span><span class="font-bold text-[#93BFC7] md:text-[#84B179]">Katy Perry</span></div>
-        <div><span class="mobile-label">Album:</span><span class="text-[#84B179]">Teenage Dream</span></div>
-        <div><span class="mobile-label">Song:</span><span class="text-[#84B179]">Hot n Cold</span></div>
+        <div><span class="mobile-label">Artist:</span><span class="artist">Katy Perry</span></div>
+        <div><span class="mobile-label">Album:</span><span class="othertext">Teenage Dream</span></div>
+        <div><span class="mobile-label">Song:</span><span class="othertext">Hot n Cold</span></div>
 </div>
 
 <div class="song-row">
-        <div><span class="mobile-label">Artist:</span><span class="font-bold text-[#93BFC7] md:text-[#84B179]">Her's</span></div>
-        <div><span class="mobile-label">Album:</span><span class="text-[#84B179]">Introduction to Her's</span></div>
-        <div><span class="mobile-label">Song:</span><span class="text-[#84B179]">What Once Was</span></div>
+        <div><span class="mobile-label">Artist:</span><span class="artist">Her's</span></div>
+        <div><span class="mobile-label">Album:</span><span class="othertext">Introduction to Her's</span></div>
+        <div><span class="mobile-label">Song:</span><span class="othertext">What Once Was</span></div>
 </div>
 
 <div class="song-row">
-        <div><span class="mobile-label">Artist:</span><span class="font-bold text-[#93BFC7] md:text-[#84B179]">Arctic Monkeys</span></div>
-        <div><span class="mobile-label">Album:</span><span class="text-[#84B179]">AM</span></div>
-        <div><span class="mobile-label">Song:</span><span class="text-[#84B179]">No 1. Party Anthem</span></div>
+        <div><span class="mobile-label">Artist:</span><span class="artist">Arctic Monkeys</span></div>
+        <div><span class="mobile-label">Album:</span><span class="othertext">AM</span></div>
+        <div><span class="mobile-label">Song:</span><span class="othertext">No 1. Party Anthem</span></div>
 </div>
 
 <div class="song-row">
-        <div><span class="mobile-label">Artist:</span><span class="font-bold text-[#93BFC7] md:text-[#84B179]">My Chemical Romance</span></div>
-        <div><span class="mobile-label">Album:</span><span class="text-[#84B179]">The Black Parade</span></div>
-        <div><span class="mobile-label">Song:</span><span class="text-[#84B179]">I Don't Love You</span></div>
+        <div><span class="mobile-label">Artist:</span><span class="artist">My Chemical Romance</span></div>
+        <div><span class="mobile-label">Album:</span><span class="othertext">The Black Parade</span></div>
+        <div><span class="mobile-label">Song:</span><span class="othertext">I Don't Love You</span></div>
 </div>
 
 <div class="song-row">
-        <div><span class="mobile-label">Artist:</span><span class="font-bold text-[#93BFC7] md:text-[#84B179]">Panic! at the Disco</span></div>
-        <div><span class="mobile-label">Album:</span><span class="text-[#84B179]">Death of a Bachelor</span></div>
-        <div><span class="mobile-label">Song:</span><span class="text-[#84B179]">Golden Days</span></div>
+        <div><span class="mobile-label">Artist:</span><span class="artist">Panic! at the Disco</span></div>
+        <div><span class="mobile-label">Album:</span><span class="othertext">Death of a Bachelor</span></div>
+        <div><span class="mobile-label">Song:</span><span class="othertext">Golden Days</span></div>
 </div>
 
 <div class="song-row">
-        <div><span class="mobile-label">Artist:</span><span class="font-bold text-[#93BFC7] md:text-[#84B179]">The Neighbourhood</span></div>
-        <div><span class="mobile-label">Album:</span><span class="text-[#84B179]">I Love You</span></div>
-        <div><span class="mobile-label">Song:</span><span class="text-[#84B179]">Lovebomb</span></div>
+        <div><span class="mobile-label">Artist:</span><span class="artist">The Neighbourhood</span></div>
+        <div><span class="mobile-label">Album:</span><span class="othertext">I Love You</span></div>
+        <div><span class="mobile-label">Song:</span><span class="othertext">Lovebomb</span></div>
 </div>
 
 <div class="song-row">
-        <div><span class="mobile-label">Artist:</span><span class="font-bold text-[#93BFC7] md:text-[#84B179]">Mother Mother</span></div>
-        <div><span class="mobile-label">Album:</span><span class="text-[#84B179]">O My Heart</span></div>
-        <div><span class="mobile-label">Song:</span><span class="text-[#84B179]">Ghosting</span></div>
+        <div><span class="mobile-label">Artist:</span><span class="artist">Mother Mother</span></div>
+        <div><span class="mobile-label">Album:</span><span class="othertext">O My Heart</span></div>
+        <div><span class="mobile-label">Song:</span><span class="othertext">Ghosting</span></div>
 </div>
 
 <div class="song-row">
-        <div><span class="mobile-label">Artist:</span><span class="font-bold text-[#93BFC7] md:text-[#84B179]">Cal In Red</span></div>
-        <div><span class="mobile-label">Album:</span><span class="text-[#84B179]">Low Low</span></div>
-        <div><span class="mobile-label">Song:</span><span class="text-[#84B179]">Replay</span></div>
+        <div><span class="mobile-label">Artist:</span><span class="artist">Cal In Red</span></div>
+        <div><span class="mobile-label">Album:</span><span class="othertext">Low Low</span></div>
+        <div><span class="mobile-label">Song:</span><span class="othertext">Replay</span></div>
 </div>
 
 </table>
 </div> <!--TABLE CONTAINER END-->
 </section>
 </main>
+<footer class="footer">
+  <div>
+    <a href="https://github.com/cmrecmre" target="_blank" class="social-icon">GitHub</a>
+    <a href="https://www.linkedin.com/in/cemre-su-türlü-bbb828318" target="_blank" class="social-icon">LinkedIn</a>
+    <a href="https://www.instagram.com/_slowtwn/" target="_blank" class="social-icon">Instagram</a>
+  </div>
+</footer>
 </body>
-<footer><hr></footer>
 </html>
