@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<title>About ME!!!!!!</title> <!---First title-->
+<link rel="icon" type="image/x-icon" href="Favicon.png">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style type="text/tailwindcss">
+    @layer components{
+    
+    .main-wrapper {
+        @apply max-w-5xl mx-auto p-4 space-y-8;
+     }
+    .intro{ 
+        @apply bg-[#93BFC7] flex flex-col md:flex-row justify-between items-center p-6 rounded-2xl md:w-3/4 mx-auto shadow-lg text-center gap-4;
+    }
+    .container1{
+        @apply bg-[#ECF4E8] flex flex-col p-6 rounded-2xl shadow-inner w-full;
+    }
+    .infodump{
+        @apply bg-[#93BFC7] p-8 rounded-xl shadow-lg text-start w-full;
+    }
+    .container2{
+        @apply bg-[#ECF4E8] flex items-center shadow-lg rounded-xl;
+    }
+    .logo-container{
+        @apply flex flex-col items-center justify-center space-y-4 my-10;
+    }
+    .logo-img{
+        @apply w-64 h-64 md:w-80 md:h-80 object-contain rounded-full border-4 border-[#84B179] shadow-xl;
+    }
+   .nav-container{
+        @apply grid grid-cols-1 md:grid-cols-3 gap-4 mt-8;
+    }
+    .nav-button {
+         @apply h-20 flex items-center justify-center bg-gradient-to-b from-[#C7EABB] to-[#E8F5BD] 
+         text-[#93BFC7] font-bold rounded-2xl shadow-md hover:scale-105 transition-transform duration-300 border-4 border-[#84B179];
+     }
+
+    .content-link 
+    { @apply text-[#93BFC7] underline font-semibold hover:text-[#7aa9b1]; }
+}
+</style>
+</head>  
+<body class="bg-gradient-to-b from-[#CBF3BB] to-[#ECF4E8] min-h-screen">  
+<main class="main-wrapper">
+
+<section>
+<div class="intro">
+<div class="container1">
+<h1 class="text-3xl font-bold italic text-[#93BFC7]">Introduction &#9885;</h1> <!--- Intro and first paragraph-->
+<p class="text-l font-normal text-[#84B179]">My name is Cemre, full name is Cemre Su Türlü.<br>I am currently a 4th grade student at Yaşar Uni and I study Computer Engineering.<br>
+I am almost 22 years old, and I am quite fascinated by fictional media<br>
+Besides those, I am an artist and I plan to /hope to/ work in a field that I can still pursue my carreer in an artistic field.<br>
+And what sort of an artist am I? More info in the hobbies page.</p>
+</div> <!--CONTAINER2-->
+</div> <!--INTRO-->
+</section>
+
+<section>
+<div class="infodump">
+<h2 class="text-3xl text-center font-bold italic text-[#ECF4E8]">More Random Info? Just So That It Looks Fuller</h2> <!---Start of the list, decided to use one here-->
+<div class="container2">
+<ul class="pace-y-4 text-[#84B179] md:px-10">
+<li class="flex gap-2"><span>&#9885</span><span>Like I mentioned above, I am almost obsessed with the fictional characters I like. My current favorite is Alucard from Castlevania.
+I consider him as my "fictional other"- I guess I am married in that sense. Here he is: <a href="https://castlevania.fandom.com/wiki/Alucard" class="content-link">Alucard</a></span></li>
+<li class="flex gap-2"><span>&#9885</span><span>My hair color combos will include at least a shade of green.</span></li>
+<li class="flex gap-2"><span>&#9885</span><span>Relatively to the information above, I adore frogs. They are my favorite animals. &#128056;</span></li>
+<li class="flex gap-2"><span>&#9885</span><span>I lowkey despise AI, especially generative AI and so called AI "artwork". As an artist, it is definitely NOT art.</span></li>
+<li class="flex gap-2"><span>&#9885</span><span>I know Turkish /shocker/, English, German. I am also learning Danish out of pure curiosity. Japanese too but not as accelarated as the rest.</span></li>
+<li class="flex gap-2"><span>&#9885</span><span>I am a very, very, picky eater. I do not know how I survive with this level of picky eating.</span></li>
+<li class="flex gap-2"><span>&#9885</span><span>My favorite genres of music are: EDM, Indie, Alternative Rock.</span></li>
+<li class="flex gap-2"><span>&#9885</span><span>By choosing this course, I was hoping to make my "song recommendation" website into a reality, which might happen actually, why not.</span></li>   
+</ul>
+</div> <!--CONTAINER2-->
+</div> <!--INFODUMP-->
+</section>
+
+<section>
+<div class="logo-container text-center">
+<h4 class="text-xl md:text-2xl text-center font-bold italic text-[#93BFC7] max-w-2xl">This is my logo, which is also a depiction of me. I drew it. My username is slowtwn on most platforms, hence the word on it.</h4>
+<img src="logo.png" height="400" width="400" alt="My Logo" class="logo-img">
+</div>
+</section>
+
+<nav class="nav-container">
+<a href="hobbies.html" class="nav-button italic">Hobbies</a>
+<a href="projects.html" class="nav-button italic">Projects</a>
+<a href="Favsongs.html" class="nav-button italic">Favsongs</a>
+</nav>
+
+</div>
+</div>
+</div>
+</main>
+</body>
+<footer></footer>
+</html>

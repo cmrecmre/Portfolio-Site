@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+<title>Projects</title>
+<link rel="icon" type="image/x-icon" href="Favicon.png">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style type="text/tailwindcss">
+    @layer components{
+    
+    .main-wrapper {
+        @apply max-w-5xl mx-auto p-4 space-y-8;
+     }
+    .intro{ 
+        @apply bg-[#93BFC7] flex flex-col md:flex-row justify-between items-center p-6 w-full md:w-3/4 mx-auto shadow-lg text-center gap-4 rounded-2xl;
+    }
+    .container1{
+        @apply bg-[#ECF4E8] flex flex-col p-6 rounded-xl shadow-inner w-full text-xl italic text-center text-[#93BFC7] rounded-2xl;
+    }
+    .project-item {
+      /* Her proje arası boşluk ve alt çizgi */
+      @apply mb-6 pb-4 border-b border-[#93BFC7] last:border-0 last:mb-0;
+    }
+    .project-title {
+      /* Başlıkların rengi ve kalınlığı */
+      @apply text-[#93BFC7] font-bold text-xl flex items-center gap-2 mb-1;
+    }
+    .project-desc {
+      /* Açıklamaların rengi ve boyutu (Daha sade bir yeşil tonu) */
+      @apply text-[#84B179] text-base font-normal not-italic pl-7;
+    }
+    .content-link 
+    { @apply text-[#93BFC7] underline font-semibold hover:text-[#7aa9b1]; }
+}
+</style>    
+</head>
+<body class="bg-gradient-to-b from-[#CBF3BB] to-[#ECF4E8] min-h-screen">  
+<main class="main-wrapper">
+
+<section>
+<div class="intro">
+<h1 class="text-3xl text-center font-bold italic text-[#ECF4E8]">Introduction</h1>  <!--INTRO-->
+<p class="text-l font-normal text-[#ECF4E8]">I will quickly go over the projects I have mentioned in my CV here.</p>
+</div> <!--INTRO DIV END-->
+</section>
+
+<section>
+<div class="container1 text-left">
+<ul class="list-none p-0">
+<h2 class="text-3xl text-center font-bold italic text-[#93BFC7] mb-8">Projects</h2>
+
+<li class="project-item">
+    <div class="project-title">
+          <span>&#9885;</span>CAS - Care About Skin Application
+    </div>
+<p class="project-desc">A cosmetics application is set to be developed by using machine learning techniques.</p>
+</li>
+
+<li class="project-item">
+    <div class="project-title">
+          <span>&#9885;</span>Damnation Game Project - Group Project
+    </div>
+<p class="project-desc">Assets were hand drawn and animated for the project. We also have a landing page for this one -> <a href="https://damnation.netlify.app/" class="content-link">Damnation</a></p>
+</li>
+
+<li class="project-item">
+    <div class="project-title">
+          <span>&#9885;</span>Analysis of the « Predict Students&apos; Dropout and Academic Success » Dataset - Group Project
+    </div>
+<p class="project-desc">Data in a database is analyzed, presented and reported. Association rules were found.</p>
+</li>
+
+<li class="project-item">
+    <div class="project-title">
+          <span>&#9885;</span>Single Cycle MIPS CPU Design - Individual Project
+    </div>
+<p class="project-desc">A single cycle CPU design suitable for MIPS architecture was made with Logism.</p>
+</li>
+
+<li class="project-item">
+    <div class="project-title">
+          <span>&#9885;</span>TEGV Dreams Workshop Mentorship - Social Responsibility Project
+    </div>
+<p class="project-desc">Participating children were given mentorship on artistic activities.</p>
+</li>
+
+
+</ul> <!--END OF CONTAINER-->
+</div>  <!--CONTAINER DIV END-->  
+</section>
+
+</main>
+</body>
+<footer></footer>
+</html>
